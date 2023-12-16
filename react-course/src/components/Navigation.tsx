@@ -8,6 +8,12 @@ export function Navigation() {
           <span className="text-3xl font-extrabold tracking-wider">React-Fall-2023</span>
     
           <div className="space-x-6">
+          <Link
+              to="/sign_in"
+              className="text-lg font-medium hover:text-gray-300 transition duration-300"
+            >
+              Sign In
+            </Link>
             <Link
               to="/"
               className="text-lg font-medium hover:text-gray-300 transition duration-300"
