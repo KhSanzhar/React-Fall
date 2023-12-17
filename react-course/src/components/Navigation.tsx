@@ -13,7 +13,7 @@ export function Navigation() {
 
     return (
           <nav className="h-20 flex items-center justify-between px-8 bg-gradient-to-r from-gray-600 to-gray-900 text-white shadow-lg">
-            <span className="text-3xl font-extrabold tracking-wider">React-Fall-2023</span>
+            <span className="text-3xl font-extrabold tracking-wider">LuxeCart</span>
       
             <div className="space-x-6">
             {auth?.currentUser ? (
