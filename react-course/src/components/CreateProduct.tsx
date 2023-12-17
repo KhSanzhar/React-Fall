@@ -24,7 +24,7 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
             setError('Please enter valid title, price, description, category, and count.');
             return;
         }
-
+        
         const productData: IProduct = {
             title: title,
             price: price,
@@ -40,10 +40,16 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
         try {
             const response = await axios.post<IProduct>('https://fakestoreapi.com/products', productData);
             onCreate(response.data);
+
+
+            const existingProducts = JSON.parse(localStorage.getItem('myProducts') || '[]');
+            existingProducts.push(response.data);
+            localStorage.setItem('myProducts', JSON.stringify(existingProducts));
         } catch (error) {
             setError('Failed to create product. Please try again later.');
         }
     };
+
 
     return (
         <form onSubmit={submitHandler}>
@@ -67,6 +73,11 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
                 value={description}
                 onChange={(event) => setDescription(event.target.value)}
             />
+            {/* <input
+                type="file"
+                className="border py-2 px-4 mb-2 w-full outline-0"
+                onChange={handleImageChange}
+            /> */}
             <input
                 type="text"
                 className="border py-2 px-4 mb-2 w-full outline-0"
@@ -81,6 +92,7 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
                 value={count}
                 onChange={(event) => setCount(Number(event.target.value))}
             />
+            
 
             {error && <ErrorMessage error={error} />}
 
@@ -92,55 +104,3 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
 
 
 
-
-
-// import React, { useState } from "react";
-// import { IProduct } from "../models";
-// import axios from "axios";
-// import { ErrorMessage } from "./ErrorMessage";
-
-
-
-// interface CreateProductProps {
-//     onCreate: (product: IProduct) => void
-// }
-
-// export function CreateProduct({ onCreate }: CreateProductProps) {
-
-//     const [value, setValue] = useState('')
-//     const [error, setError] = useState('')
-
-
-//     const submitHandler = async (event: React.FormEvent) => {
-//         event.preventDefault()
-//         setError('')
-
-//         if (value.trim().length === 0) {
-//             setError('Please enter valid title.')
-//             return
-//         }
-
-//         productData.title = value
-
-//         const response = await axios.post<IProduct>('https://fakestoreapi.com/products', productData)
-
-//         onCreate(response.data)
-//     }
-
-//     return(
-//         <form onSubmit={submitHandler}>
-//             <input
-//                 type="text" 
-//                 className="border py-2 px-4 mb-2 w-full outline-0" 
-//                 placeholder="Enter product title..." 
-//                 value={value}
-//                 onChange={event => setValue(event.target.value)}
-//             />
-
-//             {error && <ErrorMessage error={error}/>}
-
-
-//             <button type="submit" className="py-2 px-4 border bg-yellow-400 hover:text-white">Create</button>
-//         </form>
-//     )
-// }
