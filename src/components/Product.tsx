@@ -1,13 +1,6 @@
 import React, { useState } from "react"
-import { IProduct } from "../models"
 
-interface ProductProps {
-    product: IProduct
-}
-
-
-export function Product({ product }: ProductProps) {
-
+export function Product({ product }: any) {
     const [details, setDetails] = useState(false)
 
     const btnBgClassName = details ? 'bg-red-400' : 'bg-yellow-400'
@@ -28,7 +21,6 @@ export function Product({ product }: ProductProps) {
 
             {details && <div>
                 <p>{ product.description }</p>
-                <p>Rate: <span style={{ fontWeight: 'bold' }}>{ product?.rating?.rate }</span></p>
             </div>}
 
         </div>

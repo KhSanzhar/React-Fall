@@ -1,32 +1,32 @@
-import React, { useState } from "react";
-import { useContext } from 'react';
-import { CreateProduct } from "../components/CreateProduct";
-import { ErrorMessage } from "../components/ErrorMessage";
-import { Modal } from "../components/Modal";
-import { Product } from "../components/Product";
-import { Loader } from "../components/loader";
-import { useProducts } from "../hooks/products";
-import { IProduct } from "../models";
+import React, { useEffect, useState } from "react";
+import { pullData } from "../data/products";
 import { ProductSearch } from "../components/ProductSearch";
-
+import { Product } from "../components/Product";
 
 export function ProductsPage() {
-    const {loading, error, products} = useProducts();
+    const [productsList, setProductsList] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
     const [ searchTerm, setSearchTerm] = useState('');
-
-    const filteredProducts = products.filter(product =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    useEffect(() => {
+        const pull = async () => {
+          let products = await pullData()
+          setProductsList(products)
+        }
+        pull()
+      }, [])
+      useEffect(() => {
+        const filteredProducts = productsList.filter(product =>
+          JSON.stringify(product['title']).toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredProducts(filteredProducts);
+      }, [searchTerm, productsList]);
 
     return (
         <div className="container mx-auto max-w-2xl pt-10 pb-16 px-6">
-            {loading && <Loader />}
-            {error && <ErrorMessage error={error} />}
-
             <ProductSearch onSearch={setSearchTerm} />
 
             {filteredProducts.map((product, index) => (
-                <Product product={product} key={product.id} />
+                <Product product={product} key={product['id']} />
             ))}
     
         </div>

@@ -1,5 +1,4 @@
 import React, { ChangeEvent, useState } from "react";
-import { IProduct } from "../models";
 
 interface ProductSearchProps {
     onSearch: (query: string) => void;

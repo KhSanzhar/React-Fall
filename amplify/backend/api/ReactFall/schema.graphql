@@ -1,10 +1,11 @@
-type Product {
+type Product @model @auth(rules: [{allow: public}]) {
   id: ID!
-  title: String
-  price: Float
-  description: String
-  category: String
-  image: String
+  title: String!
+  price: Float!
+  description: String!
+  category: String!
+  image: String!
+  Users: [User] @manyToMany(relationName: "ProductUser")
 }
 
 type User @model @auth(rules: [{allow: public, operations: [read]}, {allow: groups, groups: ["admin"], operations: [read, create, update, delete]}]) {
@@ -14,6 +15,6 @@ type User @model @auth(rules: [{allow: public, operations: [read]}, {allow: grou
   login: String!
   email: String!
   password: String!
-  productCart: [Product]
+  products: [Product] @manyToMany(relationName: "ProductUser")
 }
  

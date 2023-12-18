@@ -1,6 +1,63 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateProduct = /* GraphQL */ `
+  subscription OnCreateProduct($filter: ModelSubscriptionProductFilterInput) {
+    onCreateProduct(filter: $filter) {
+      id
+      title
+      price
+      description
+      category
+      image
+      Users {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateProduct = /* GraphQL */ `
+  subscription OnUpdateProduct($filter: ModelSubscriptionProductFilterInput) {
+    onUpdateProduct(filter: $filter) {
+      id
+      title
+      price
+      description
+      category
+      image
+      Users {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteProduct = /* GraphQL */ `
+  subscription OnDeleteProduct($filter: ModelSubscriptionProductFilterInput) {
+    onDeleteProduct(filter: $filter) {
+      id
+      title
+      price
+      description
+      category
+      image
+      Users {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const onCreateUser = /* GraphQL */ `
   subscription OnCreateUser($filter: ModelSubscriptionUserFilterInput) {
     onCreateUser(filter: $filter) {
@@ -10,15 +67,8 @@ export const onCreateUser = /* GraphQL */ `
       login
       email
       password
-      productCart {
-        id
-        title
-        price
-        description
-        category
-        image
-        rating
-        ratecount
+      products {
+        nextToken
         __typename
       }
       createdAt
@@ -36,15 +86,8 @@ export const onUpdateUser = /* GraphQL */ `
       login
       email
       password
-      productCart {
-        id
-        title
-        price
-        description
-        category
-        image
-        rating
-        ratecount
+      products {
+        nextToken
         __typename
       }
       createdAt
@@ -62,15 +105,116 @@ export const onDeleteUser = /* GraphQL */ `
       login
       email
       password
-      productCart {
+      products {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onCreateProductUser = /* GraphQL */ `
+  subscription OnCreateProductUser(
+    $filter: ModelSubscriptionProductUserFilterInput
+  ) {
+    onCreateProductUser(filter: $filter) {
+      id
+      productId
+      userId
+      product {
         id
         title
         price
         description
         category
         image
-        rating
-        ratecount
+        createdAt
+        updatedAt
+        __typename
+      }
+      user {
+        id
+        FirstName
+        LastName
+        login
+        email
+        password
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateProductUser = /* GraphQL */ `
+  subscription OnUpdateProductUser(
+    $filter: ModelSubscriptionProductUserFilterInput
+  ) {
+    onUpdateProductUser(filter: $filter) {
+      id
+      productId
+      userId
+      product {
+        id
+        title
+        price
+        description
+        category
+        image
+        createdAt
+        updatedAt
+        __typename
+      }
+      user {
+        id
+        FirstName
+        LastName
+        login
+        email
+        password
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteProductUser = /* GraphQL */ `
+  subscription OnDeleteProductUser(
+    $filter: ModelSubscriptionProductUserFilterInput
+  ) {
+    onDeleteProductUser(filter: $filter) {
+      id
+      productId
+      userId
+      product {
+        id
+        title
+        price
+        description
+        category
+        image
+        createdAt
+        updatedAt
+        __typename
+      }
+      user {
+        id
+        FirstName
+        LastName
+        login
+        email
+        password
+        createdAt
+        updatedAt
         __typename
       }
       createdAt
