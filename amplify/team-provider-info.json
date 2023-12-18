@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactfall-dev-191119-authRole",
+      "UnauthRoleArn": "arn:aws:iam::517578035921:role/amplify-reactfall-dev-191119-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::517578035921:role/amplify-reactfall-dev-191119-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-reactfall-dev-191119-deployment",
+      "UnauthRoleName": "amplify-reactfall-dev-191119-unauthRole",
+      "StackName": "amplify-reactfall-dev-191119",
+      "StackId": "arn:aws:cloudformation:eu-north-1:517578035921:stack/amplify-reactfall-dev-191119/f0f6c460-9da6-11ee-acf6-0e1847c0bf6c",
+      "AmplifyAppId": "dfrw13625ldgk"
+    },
+    "categories": {
+      "function": {
+        "reactfalle16ae0aa": {
+          "deploymentBucketName": "amplify-reactfall-dev-191119-deployment",
+          "s3Key": "amplify-builds/reactfalle16ae0aa-496f306763374c754c64-build.zip"
+        }
+      },
+      "api": {
+        "api9a21f969": {},
+        "ReactFall": {}
+      },
+      "auth": {
+        "ReactFall": {}
+      },
+      "storage": {
+        "s39f94655a": {}
+      }
+    }
+  }
+}

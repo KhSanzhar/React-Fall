@@ -1,0 +1,19 @@
+type Product {
+  id: ID!
+  title: String
+  price: Float
+  description: String
+  category: String
+  image: String
+}
+
+type User @model @auth(rules: [{allow: public, operations: [read]}, {allow: groups, groups: ["admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  FirstName: String!
+  LastName: String!
+  login: String!
+  email: String!
+  password: String!
+  productCart: [Product]
+}
+ 
