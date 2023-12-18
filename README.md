@@ -11,7 +11,9 @@
 ## Features
 
 **Streamlined User Registration and Login:** Simplified user journey with a straightforward and secure registration process, enhancing user experience right from their first interaction.
+
 **Detailed Product Exploration:** extensive details and high-resolution images, providing a comprehensive understanding of each item.
+
 **User-Driven Product Additions:** Registered users have the unique ability to contribute to the marketplace by adding their own products to the main page
 
 ## Pages
