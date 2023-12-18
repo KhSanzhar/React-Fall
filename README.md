@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +45,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+This project for React course 
+This is an online store where you can add your products only after registration. Because the api is used here: https://fakestoreapi.com You will need to log in using the prepared accounts.
+>>>>>>> 6d00eef2705c04740c208356df0a163e7bd54d80
