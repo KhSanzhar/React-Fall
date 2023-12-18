@@ -7,7 +7,6 @@ import { Product } from "../components/Product";
 import { Loader } from "../components/loader";
 import { useProducts } from "../hooks/products";
 import { IProduct } from "../models";
-import { ModalContext } from "../context/ModalContext";
 import { ProductSearch } from "../components/ProductSearch";
 
 
