@@ -56,6 +56,7 @@ export const getUser = /* GraphQL */ `
         nextToken
         __typename
       }
+      userId
       createdAt
       updatedAt
       __typename
@@ -76,6 +77,7 @@ export const listUsers = /* GraphQL */ `
         login
         email
         password
+        userId
         createdAt
         updatedAt
         __typename
@@ -109,6 +111,7 @@ export const getProductUser = /* GraphQL */ `
         login
         email
         password
+        userId
         createdAt
         updatedAt
         __typename

@@ -11,22 +11,16 @@ import config from './amplifyconfiguration.json';
 import { Authenticator, View, useTheme } from "@aws-amplify/ui-react";
 
 import { useEffect } from "react";
-import { pullData } from "./data/products";
+import { fetchUserAttributes } from 'aws-amplify/auth';
+
+import { createUser } from './graphql/mutations';
+import { listUsers, getUser } from "./graphql/queries";
+
+const client = generateClient()
 
 Amplify.configure(config); 
 
 function App() {
-    // useEffect(() => {
-    //   const pullData = async () => {
-    //     let allProducts = await client.graphql({
-    //       query: listProducts
-    //     })
-    //     let products = JSON.parse(JSON.stringify(allProducts))
-    //     console.log(products['data']['listProducts']['items'])
-    //   }
-    //   pullData();
-    // }, [])
-    
   const components = {
     Header() {
       const { tokens } = useTheme();
@@ -55,3 +49,7 @@ function App() {
   )
 }
 export default App;
+function handleFetchUserAttributes() {
+  throw new Error("Function not implemented.");
+}
+

@@ -83,6 +83,7 @@ export const createUser = /* GraphQL */ `
         nextToken
         __typename
       }
+      userId
       createdAt
       updatedAt
       __typename
@@ -105,6 +106,7 @@ export const updateUser = /* GraphQL */ `
         nextToken
         __typename
       }
+      userId
       createdAt
       updatedAt
       __typename
@@ -127,6 +129,7 @@ export const deleteUser = /* GraphQL */ `
         nextToken
         __typename
       }
+      userId
       createdAt
       updatedAt
       __typename
@@ -160,6 +163,7 @@ export const createProductUser = /* GraphQL */ `
         login
         email
         password
+        userId
         createdAt
         updatedAt
         __typename
@@ -197,6 +201,7 @@ export const updateProductUser = /* GraphQL */ `
         login
         email
         password
+        userId
         createdAt
         updatedAt
         __typename
@@ -234,6 +239,7 @@ export const deleteProductUser = /* GraphQL */ `
         login
         email
         password
+        userId
         createdAt
         updatedAt
         __typename
