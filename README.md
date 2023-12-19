@@ -7,7 +7,7 @@
 
 ## Description
 
- LuxeCart is fullstack e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base.
+ LuxeCart is fullstack e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base. A non-flowing token, even if we close the site tab, our session is saved.
 
 ## Features
 
