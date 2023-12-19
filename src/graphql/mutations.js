@@ -13,10 +13,6 @@ export const createProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -35,10 +31,6 @@ export const updateProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -57,10 +49,6 @@ export const deleteProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -79,10 +67,7 @@ export const createUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
       createdAt
       updatedAt
@@ -102,10 +87,7 @@ export const updateUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
       createdAt
       updatedAt
@@ -125,125 +107,8 @@ export const deleteUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const createProductUser = /* GraphQL */ `
-  mutation CreateProductUser(
-    $input: CreateProductUserInput!
-    $condition: ModelProductUserConditionInput
-  ) {
-    createProductUser(input: $input, condition: $condition) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const updateProductUser = /* GraphQL */ `
-  mutation UpdateProductUser(
-    $input: UpdateProductUserInput!
-    $condition: ModelProductUserConditionInput
-  ) {
-    updateProductUser(input: $input, condition: $condition) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const deleteProductUser = /* GraphQL */ `
-  mutation DeleteProductUser(
-    $input: DeleteProductUserInput!
-    $condition: ModelProductUserConditionInput
-  ) {
-    deleteProductUser(input: $input, condition: $condition) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
       createdAt
       updatedAt
       __typename

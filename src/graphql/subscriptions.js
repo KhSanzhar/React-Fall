@@ -10,10 +10,6 @@ export const onCreateProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -29,10 +25,6 @@ export const onUpdateProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -48,10 +40,6 @@ export const onDeleteProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -67,10 +55,7 @@ export const onCreateUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
       createdAt
       updatedAt
@@ -87,10 +72,7 @@ export const onUpdateUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
       createdAt
       updatedAt
@@ -107,122 +89,8 @@ export const onDeleteUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const onCreateProductUser = /* GraphQL */ `
-  subscription OnCreateProductUser(
-    $filter: ModelSubscriptionProductUserFilterInput
-  ) {
-    onCreateProductUser(filter: $filter) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const onUpdateProductUser = /* GraphQL */ `
-  subscription OnUpdateProductUser(
-    $filter: ModelSubscriptionProductUserFilterInput
-  ) {
-    onUpdateProductUser(filter: $filter) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const onDeleteProductUser = /* GraphQL */ `
-  subscription OnDeleteProductUser(
-    $filter: ModelSubscriptionProductUserFilterInput
-  ) {
-    onDeleteProductUser(filter: $filter) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
       createdAt
       updatedAt
       __typename

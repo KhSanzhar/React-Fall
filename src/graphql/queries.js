@@ -10,10 +10,6 @@ export const getProduct = /* GraphQL */ `
       description
       category
       image
-      Users {
-        nextToken
-        __typename
-      }
       createdAt
       updatedAt
       __typename
@@ -52,10 +48,7 @@ export const getUser = /* GraphQL */ `
       login
       email
       password
-      products {
-        nextToken
-        __typename
-      }
+      products
       userId
       createdAt
       updatedAt
@@ -77,117 +70,7 @@ export const listUsers = /* GraphQL */ `
         login
         email
         password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      nextToken
-      __typename
-    }
-  }
-`;
-export const getProductUser = /* GraphQL */ `
-  query GetProductUser($id: ID!) {
-    getProductUser(id: $id) {
-      id
-      productId
-      userId
-      product {
-        id
-        title
-        price
-        description
-        category
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      user {
-        id
-        FirstName
-        LastName
-        login
-        email
-        password
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const listProductUsers = /* GraphQL */ `
-  query ListProductUsers(
-    $filter: ModelProductUserFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listProductUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        productId
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      nextToken
-      __typename
-    }
-  }
-`;
-export const productUsersByProductId = /* GraphQL */ `
-  query ProductUsersByProductId(
-    $productId: ID!
-    $sortDirection: ModelSortDirection
-    $filter: ModelProductUserFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    productUsersByProductId(
-      productId: $productId
-      sortDirection: $sortDirection
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        productId
-        userId
-        createdAt
-        updatedAt
-        __typename
-      }
-      nextToken
-      __typename
-    }
-  }
-`;
-export const productUsersByUserId = /* GraphQL */ `
-  query ProductUsersByUserId(
-    $userId: ID!
-    $sortDirection: ModelSortDirection
-    $filter: ModelProductUserFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    productUsersByUserId(
-      userId: $userId
-      sortDirection: $sortDirection
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
-      items {
-        id
-        productId
+        products
         userId
         createdAt
         updatedAt
