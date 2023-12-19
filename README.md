@@ -3,11 +3,11 @@
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/69b751d6-7e4c-4469-9313-ca9dcfb9f193)
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/d8cbca18-9869-423f-b4c0-030cb763463d)
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/4f0fad01-0ba5-4563-aa29-c685bc993c46)
-![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/6a1a2087-073e-4dc1-a740-1eb801492e3d)
+![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/02267272-97c5-4d88-a1e5-5a49d1375d61)
 
 ## Description
 
- LuxeCart is e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base.
+ LuxeCart is fullstack e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base.
 
 ## Features
 
@@ -17,7 +17,13 @@
 
 **User-Driven Product Additions:** Registered users have the unique ability to contribute to the marketplace by adding their own products to the main page
 
+**Secure Email Verification for Registration:** To further streamline the user experience and ensure security, a robust email verification process is integrated. Upon registration, users receive a unique confirmation code sent to their email. 
 
+**Universal Accessibility with Hosting:** One of the main advantages of the platform is its universal accessibility, thanks to reliable hosting. This ensures that anyone, anywhere can use the service
+
+**Robust Authentication System:** The platform implements a robust authentication system to ensure the security and privacy of user data. This system is fundamental in maintaining the integrity of user accounts and transactions.
+
+**Defined User Roles - Admins and Users:** The platform is designed with specific user roles, including administrators and regular users. Each role has distinct permissions and capabilities.
 
 ## Pages
 
