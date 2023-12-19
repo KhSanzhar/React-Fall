@@ -1,7 +1,8 @@
 # LuxeCart
 
-![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/7dbe7f84-c567-444a-84af-edef9175c69c)
-![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/a0757998-d7ea-4799-b17a-d493e5916c10)
+![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/69b751d6-7e4c-4469-9313-ca9dcfb9f193)
+![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/d8cbca18-9869-423f-b4c0-030cb763463d)
+![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/4f0fad01-0ba5-4563-aa29-c685bc993c46)
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/6a1a2087-073e-4dc1-a740-1eb801492e3d)
 
 ## Description
@@ -15,6 +16,8 @@
 **Detailed Product Exploration:** extensive details and high-resolution images, providing a comprehensive understanding of each item.
 
 **User-Driven Product Additions:** Registered users have the unique ability to contribute to the marketplace by adding their own products to the main page
+
+
 
 ## Pages
 
