@@ -8,7 +8,7 @@ import { generateClient } from 'aws-amplify/api';
 import { Amplify } from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
-import { Authenticator, View, useTheme } from "@aws-amplify/ui-react";
+import { Authenticator, View, useTheme, Image } from "@aws-amplify/ui-react";
 
 import { useEffect } from "react";
 import { fetchUserAttributes } from 'aws-amplify/auth';
@@ -27,7 +27,10 @@ function App() {
   
       return (
         <View textAlign="center" padding={tokens.space.large} className="text-4xl font-bold tracking-wider ">
-          LuxeCart
+          <Image id="img-logo"
+            alt="logo"
+            src="https://github.com/KhSanzhar/React-Fall/assets/98940233/8c21f4f6-d652-43fb-8718-8402487fc491"
+          />
         </View>
       );
     },

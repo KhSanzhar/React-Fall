@@ -10,7 +10,7 @@ export function Navigation(props:any) {
 
     return (
           <nav className="h-20 flex items-center justify-between px-8 bg-gradient-to-r from-gray-600 to-gray-900 text-white shadow-lg">
-            <span className="text-3xl font-extrabold tracking-wider">LuxeCart</span>
+            <span className="text-3xl font-extrabold tracking-wider">LuxCart</span>
       
             <div className="space-x-6">
             

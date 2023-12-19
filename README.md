@@ -1,4 +1,4 @@
-# LuxeCart
+# LuxCart
 
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/69b751d6-7e4c-4469-9313-ca9dcfb9f193)
 ![изображение](https://github.com/KhSanzhar/React-Fall/assets/98977002/d8cbca18-9869-423f-b4c0-030cb763463d)
@@ -7,7 +7,7 @@
 
 ## Description
 
- LuxeCart is fullstack e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base. A non-flowing token, even if we close the site tab, our session is saved.
+ LuxCart is fullstack e-commerce website developed using React and AWS Amplify. Unlike traditional single-product platforms, our site offers an extensive range of products with detailed descriptions and user ratings. Its user-friendly design across multiple pages ensures a smooth and informative shopping experience. The use of AWS Amplify enhances the site's performance and scalability, catering to a diverse and growing user base. A non-flowing token, even if we close the site tab, our session is saved.
 
 ## Features
 
@@ -33,7 +33,7 @@
 4. **About Page**
 
 ## Technologies Used
-**LuxeCart** utilizes the following technologies:
+**LuxCart** utilizes the following technologies:
 
 - React
 - AWS Amplify
